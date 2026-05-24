@@ -70,7 +70,8 @@ export function AboutSection() {
             >
               <div className="prose prose-lg">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  非IT職を経て、独学でエンジニアに転身しました。
+                  非IT職を経て、研修と
+                  独学でエンジニアに転身しました。
                   現在は<span className="text-primary font-semibold">フロントエンドからバックエンド・インフラまで</span>フルスタックで担当できるエンジニアとして活動しています。
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">

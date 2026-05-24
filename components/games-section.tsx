@@ -30,7 +30,7 @@ const GAME_LIST: Array<{ id: GameId; icon: LucideIcon; title: string; descriptio
   { id: "snake",   icon: Waypoints,  title: "スネーク",      description: "クラシックゲーム" },
   { id: "2048",    icon: Hash,       title: "2048",           description: "数字合体パズル" },
   { id: "dodge",   icon: Car,        title: "カーレース",    description: "障害物よけ" },
-  { id: "number",  icon: Grid3x3,    title: "ナンプレ",      description: "4×4 数独" },
+  { id: "number",  icon: Grid3x3,    title: "ナンプレ",      description: "9×9 数独" },
 ]
 
 function renderActiveGame(gameId: GameId) {

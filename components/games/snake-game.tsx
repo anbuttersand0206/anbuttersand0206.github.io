@@ -162,7 +162,12 @@ export function SnakeGame() {
 
   function handleDirectionInput(dir: Direction) {
     if (gameStatusRef.current === "idle" || gameStatusRef.current === "over") {
-      startGame(); return
+      startGame()
+      // startGame が nextDirectionRef を "right" に設定した後、逆方向でなければ反映
+      if (dir !== OPPOSITE[nextDirectionRef.current]) {
+        nextDirectionRef.current = dir
+      }
+      return
     }
     // 逆方向への転換は無効
     if (dir === OPPOSITE[directionRef.current]) return
@@ -235,17 +240,25 @@ export function SnakeGame() {
         onTouchEnd={handleTouchEnd}
       />
 
-      <div className="flex justify-center gap-1">
-        {(["up", "down", "left", "right"] as Direction[]).map(dir => (
-          <button
-            key={dir}
-            onClick={() => handleDirectionInput(dir)}
-            className="w-9 h-9 rounded-lg text-sm flex items-center justify-center active:scale-90 transition-transform"
-            style={{ background: "#E2D4F8", border: "1px solid #C9B4F0", color: "#3D3058" }}
-          >
-            {{ up: "↑", down: "↓", left: "←", right: "→" }[dir]}
-          </button>
-        ))}
+      {/* 十字ボタン（クロス配置） */}
+      <div className="flex flex-col items-center gap-1">
+        <button
+          onPointerDown={(e) => { e.preventDefault(); handleDirectionInput("up") }}
+          className="w-9 h-9 rounded-lg text-sm flex items-center justify-center active:scale-90 transition-transform"
+          style={{ background: "#E2D4F8", border: "1px solid #C9B4F0", color: "#3D3058" }}
+        >↑</button>
+        <div className="flex gap-1">
+          {(["left", "down", "right"] as Direction[]).map(dir => (
+            <button
+              key={dir}
+              onPointerDown={(e) => { e.preventDefault(); handleDirectionInput(dir) }}
+              className="w-9 h-9 rounded-lg text-sm flex items-center justify-center active:scale-90 transition-transform"
+              style={{ background: "#E2D4F8", border: "1px solid #C9B4F0", color: "#3D3058" }}
+            >
+              {{ left: "←", down: "↓", right: "→" }[dir]}
+            </button>
+          ))}
+        </div>
       </div>
 
       <p className="text-xs text-center" style={{ color: "#7C6F9F80" }}>
