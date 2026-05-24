@@ -20,7 +20,7 @@ const works = [
       "WebAssemblyでコンパイルしたC++描画エンジンをブラウザで動かし、Socket.IOでリアルタイム共有するお絵描きチャットアプリ。Nginx + Dockerで自己ホスト可能。",
     gradient: "linear-gradient(135deg, #c9b4f0 0%, #7c6f9f 100%)",
     tags: ["TypeScript", "C++ / WASM", "Node.js", "Socket.IO", "Docker", "Nginx", "Emscripten"],
-    github: null,
+    github: "https://github.com/anbuttersand0206/oekaki-chat-neo",
     demo: null,
   },
 ]
