@@ -1,36 +1,49 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Next.js
+.next/
+out/
 
-# testing
-/coverage
+# Environment variables
+.env
+.env.local
+.env.*.local
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# OS
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-.env
+# Cache
+.eslintcache
+.turbo/
 
-# vercel
-.vercel
+# Vercel
+.vercel/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# v0 / Snowflake sandbox artifacts
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+
+# Internal development documents (not for public repo)
+documents/
+color-palette.html
+
+# Misplaced dotfile (use .gitignore instead)
+gitignore
