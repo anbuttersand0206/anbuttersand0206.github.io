@@ -78,7 +78,7 @@ export function GamesSection() {
               <span className="font-display font-semibold text-primary text-xl opacity-80">play!</span>
             </div>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-4" />
-            <p className="text-muted-foreground font-heading font-light">携帯ミニゲーム機のときめきを求めて👀</p>
+            <p className="text-muted-foreground font-dotgothic font-light">携帯ミニゲーム機のときめきを求めて👀</p>
           </div>
 
           {/* ゲーム選択タブ */}

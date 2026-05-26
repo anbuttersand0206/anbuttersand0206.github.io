@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { DotGothic16, Outfit, Orbitron } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const dotGothic16 = DotGothic16({
@@ -43,7 +42,6 @@ export default function RootLayout({
     <html lang="ja" className={`${dotGothic16.variable} ${outfit.variable} ${orbitron.variable}`}>
       <body className="font-sans antialiased bg-background">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )

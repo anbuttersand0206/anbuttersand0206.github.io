@@ -31,16 +31,6 @@ yarn-error.log*
 .eslintcache
 .turbo/
 
-# Vercel
-.vercel/
-
-# v0 / Snowflake sandbox artifacts
-__v0_runtime_loader.js
-__v0_devtools.tsx
-__v0_jsx-dev-runtime.ts
-.snowflake/
-.v0-trash/
-
 # Internal development documents (not for public repo)
 documents/
 color-palette.html
