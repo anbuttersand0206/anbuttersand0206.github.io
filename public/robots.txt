@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anbuttersand0206.github.io/sitemap.xml
