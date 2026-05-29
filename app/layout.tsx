@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { DotGothic16, Outfit, Orbitron } from 'next/font/google'
 import './globals.css'
+import ServiceWorkerRegistration from './ServiceWorkerRegistration'
 
 const dotGothic16 = DotGothic16({
   subsets: ['latin'],
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     template: '%s | Hama Portfolio',
   },
   description:
-    '非IT職からエンジニアへ転身した日本人フルスタックエンジニア Hama のポートフォリオ。React / Next.js・TypeScript・AWS・Docker を活用し、フロントエンドからインフラまで一気通貫で開発します。転職活動中。',
+    '非IT職からエンジニアへ転身した日本人フルスタックエンジニア Hama のポートフォリオ。フロントエンドからインフラまで一気通貫で開発します。',
   keywords: [
     'フルスタックエンジニア',
     'ポートフォリオ',
@@ -95,6 +96,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  manifest: '/manifest.json',
 }
 
 export const viewport: Viewport = {
@@ -150,6 +152,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased bg-background">
+        <ServiceWorkerRegistration />
         {children}
       </body>
     </html>

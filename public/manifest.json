@@ -1,0 +1,33 @@
+{
+  "name": "Hama Portfolio | フルスタックエンジニア",
+  "short_name": "Hama Portfolio",
+  "description": "非IT職からエンジニアへ転身した日本人フルスタックエンジニア Hama のポートフォリオ。フロントエンドからインフラまで一気通貫で開発します。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1525",
+  "theme_color": "#1a1525",
+  "lang": "ja",
+  "categories": ["portfolio", "developer"],
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
